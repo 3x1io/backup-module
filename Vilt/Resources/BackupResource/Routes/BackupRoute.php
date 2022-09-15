@@ -2,7 +2,7 @@
 
 
 namespace Modules\Backup\Vilt\Resources\BackupResource\Routes;
-use Modules\Backup\Vilt\Resources\LogResource;
+use Modules\Backup\Vilt\Resources\BackupResource;
 
 use Modules\Base\Services\Components\Routes;
 
@@ -13,7 +13,7 @@ class BackupRoute extends Routes
          $this->name('backup');
          $this->type('post');
          $this->method('backup');
-         $this->controller(LogResource::class);
+         $this->controller(BackupResource::class);
          $this->path('backup');
     }
 }

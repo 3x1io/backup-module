@@ -2,7 +2,7 @@
 
 
 namespace Modules\Backup\Vilt\Resources\BackupResource\Routes;
-use Modules\Backup\Vilt\Resources\LogResource;
+use Modules\Backup\Vilt\Resources\BackupResource;
 
 use Modules\Base\Services\Components\Routes;
 
@@ -13,7 +13,7 @@ class DeleteRoute extends Routes
          $this->name('delete');
          $this->type('post');
          $this->method('delete');
-         $this->controller(LogResource::class);
+         $this->controller(BackupResource::class);
          $this->path('delete');
     }
 }

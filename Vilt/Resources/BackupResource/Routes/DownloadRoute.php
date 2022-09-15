@@ -2,7 +2,7 @@
 
 
 namespace Modules\Backup\Vilt\Resources\BackupResource\Routes;
-use Modules\Backup\Vilt\Resources\LogResource;
+use Modules\Backup\Vilt\Resources\BackupResource;
 
 use Modules\Base\Services\Components\Routes;
 
@@ -13,7 +13,7 @@ class DownloadRoute extends Routes
          $this->name('download');
          $this->type('get');
          $this->method('download');
-         $this->controller(LogResource::class);
+         $this->controller(BackupResource::class);
          $this->path('download/{record}');
     }
 }
