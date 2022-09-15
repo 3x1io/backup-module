@@ -1,0 +1,28 @@
+{
+    "name": "Backup",
+    "alias": "backup",
+    "description": "Backup module for VILT Stack build with spatie laravel-backup",
+    "keywords": [
+        "laravel",
+        "VILT",
+        "backup",
+        "spatie",
+        "base",
+        "resource",
+        "page",
+        "vilt-admin",
+        "Vilt stack",
+        "admin panel",
+        "admin one",
+        "vuejs",
+        "ineriajs",
+        "tailwind.css"
+    ],
+    "priority": 0,
+    "providers": [
+        "Modules\\Backup\\Providers\\BackupServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
