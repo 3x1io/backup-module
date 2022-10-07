@@ -10,8 +10,11 @@ class BackupDestinationStatus extends Model
 {
     use Sushi;
 
+    protected array $rows;
+
     public function getRows(): array
     {
-        return SpatieLaravelBackup::getBackupDestinationStatusData();
+        $this->rows = SpatieLaravelBackup::getBackupDestinationStatusData();
+        return  $this->rows;
     }
 }

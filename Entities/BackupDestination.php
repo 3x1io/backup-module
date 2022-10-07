@@ -12,14 +12,16 @@ class BackupDestination extends Model
 
     protected $table = 'backups';
 
+    protected ?array $rows;
+
     public function getRows(): array
     {
-        $data = [];
+        $this->rows = [];
 
         foreach (SpatieLaravelBackup::getDisks() as $disk) {
-            $data = array_merge($data, SpatieLaravelBackup::getBackupDestinationData($disk));
+            $this->rows = array_merge($this->rows, SpatieLaravelBackup::getBackupDestinationData($disk));
         }
 
-        return $data;
+        return $this->rows;
     }
 }
