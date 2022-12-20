@@ -41,6 +41,12 @@ class BackupResource extends Resource
     public ?string $module = "Backup";
     public ?bool $api = true;
 
+    public function __construct()
+    {
+        $this->table="backups";
+        $this->view="Resource";
+    }
+
     public function rows():array
     {
         $this->canCreate = false;
@@ -67,5 +73,10 @@ class BackupResource extends Resource
                 ->sortable(false)
                 ->label(__('Size')),
         ];
+    }
+
+    protected function sushiShouldCache()
+    {
+        return false;
     }
 }

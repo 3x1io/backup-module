@@ -10,7 +10,7 @@ class BackupDestination extends Model
 {
     use Sushi;
 
-    protected $table = 'backups';
+//    protected $table = 'backups';
 
     protected ?array $rows;
 
@@ -23,5 +23,10 @@ class BackupDestination extends Model
         }
 
         return $this->rows;
+    }
+
+    protected function sushiShouldCache()
+    {
+        return false;
     }
 }
